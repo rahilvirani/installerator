@@ -14,6 +14,9 @@ cookbook 'sprout-mysql',
 cookbook 'sprout-git',
   :github => 'pivotal-sprout/sprout-git'
 
+cookbook 'sprout-redis',
+  :github => 'pivotal-sprout/sprout-redis'
+
 cookbook 'sprout-base',
   :github => 'pivotal-sprout/sprout-base'
 
@@ -38,5 +41,4 @@ cookbook 'sprout-postgresql',
 cookbook 'sprout-ssh',
   :github => 'pivotal-sprout/sprout-ssh'
 
-cookbook 'sprout-jetbrains-editors',
-  :github => 'pivotal-sprout/sprout-jetbrains-editors'
+cookbook 'infl', path: 'recipes/infl'
