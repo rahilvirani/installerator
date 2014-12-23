@@ -1,61 +1,145 @@
-# sprout-wrap
+# Set Up Infrastructure
 
-[![Build Status](https://travis-ci.org/pivotal-sprout/sprout-wrap.png?branch=master)](https://travis-ci.org/pivotal-sprout/sprout-wrap)
+## Installerator (one day Interstaller)
 
-This project uses [soloist](https://github.com/mkocher/soloist) and [librarian-chef](https://github.com/applicationsonline/librarian-chef)
-to run a subset of the recipes in sprout's cookbooks.
+Try not to add manual tasks here. If the script is missing something, just add it to the script. Ask Enric how.
 
-[Fork it](https://github.com/pivotal-sprout/sprout-wrap/fork) to 
-customize its [attributes](http://docs.chef.io/attributes.html) in [soloistrc](/soloistrc) and the list of recipes 
-you'd like to use for your team. You may also want to add other cookbooks to its [Cheffile](/Cheffile), perhaps one 
-of the many [community cookbooks](https://supermarket.chef.io/cookbooks). By default it configures an OS X 
-Mavericks workstation for Ruby development.
 
-Finally, if you've never used Chef before - we highly recommend you buy &amp; watch [this excellent 17 minute screencast](http://railscasts.com/episodes/339-chef-solo-basics) by Ryan Bates. 
+#### Install GIT
+```
+http://git-scm.com/download/mac
+```
 
-## Installation under Mavericks (OS X 10.9)
+#### Get SSH keys set up
 
-### 1. Install Command Line Tools
-  
-    xcode-select --install
+```
+ssh-keygen -t rsa -q -f ~/.ssh/id_rsa -P ""
+cat ~/.ssh/id_rsa.pub
+```
 
-If you receive a message about the update server being unavailable and are on Mavericks, then you already have the command line tools.
+copy that output and add it to Github as new SSH key
+```
+https://github.com/settings/ssh
+```
 
-### 2. Clone this project
+Use your personal github if it's associated to Influitive or use influitive-server and ask for password
 
-    git clone https://github.com/pivotal-sprout/sprout-wrap.git
-    cd sprout-wrap
 
-### 3. Install soloist & and other required gems
+#### Install Installerator (very meta)
 
-If you're running under rvm or rbenv, you shouldn't preface the following commands with `sudo`.
+```
+mkdir -p ~/Code/infl/devops
+cd ~/Code/infl/devops
+git clone https://github.com/influitive/installerator.git
+cd installerator
+sudo gem install bundler
+bundle
+bundle exec soloist
+```
+Last two steps take a while; have some more coffee. You may have to re-enter password multiple times.
 
-    sudo gem install bundler
-    bundle
+### POW
 
-If you receive errors like this:
+yeah, not working from script
+```
+curl get.pow.cx | sh
+```
 
-    clang: error: unknown argument: '-multiply_definedsuppress'
+If POW doesn't work make sure that the ~/.pow folder is a symlink to
+```
+ /Users/dev/.pow -> /Users/dev/Library/Application Support/Pow/Hosts
+```
+test it by going to http://app.hub.dev
+You should get an Proxy Error not an Application Error
 
-then try downgrading those errors like this:
 
-    sudo ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future bundle
+## Set up the App
 
-### 4. Run soloist
+```
+cd ~/Code/infl
+```
 
-[The `caffeinate` command will keep your computer awake while installing; depending on your network connection, soloist can take from 10 minutes to 2 hours to complete.]
+For each project of [ 'hub', 'narci-service', 'api', 'waldo', 'community' ]
 
-    caffeinate bundle exec soloist
+```
+cd <<project>>
+gem install bundler # maybe?
+bundle
+rvm install ruby...  # maybe
+rake db:create db:schema:load  # where applicable (will fail otherwise)
+```
 
-## Roadmap
+##### In Hub project,
 
-See Pivotal Tracker: https://www.pivotaltracker.com/s/projects/884116
+Gulp Stuff
+```
+npm install gulp -g
+npm install
+```
 
-## Discussion List
+Open Rails console:
+```
+bundle exec rails c
 
-  Join [sprout-users@googlegroups.com](https://groups.google.com/forum/#!forum/sprout-users) if you use Sprout.
+c = Company.new
+c.subdomain = "app"
+c.name = "My company"
+c.save
 
-## References
 
-* Slides from @hiremaga's [lightning talk on Sprout](http://sprout-talk.cfapps.io/) at Pivotal Labs in June 2013
-* [Railscast on chef-solo](http://railscasts.com/episodes/339-chef-solo-basics) by Ryan Bates (PAID)
+c = Company.new
+c.subdomain = "philsfish"
+c.name = "Annoying Company used in Tests"
+c.save
+
+```
+
+Turn on servers
+```
+./script/foremanify  # first time only
+servers
+```
+
+Get Integrations working:
+
+```
+cd engines/integrations
+npm install
+npm install -g gulp
+gulp
+```
+## Problems
+
+If you get Dalli::Server errors in your log, try...
+
+```
+brew info memcached
+```
+
+and follow the instructions to start up memcache
+
+#### Other Problems
+
+sorry.
+
+## Done!
+
+Visit http://app.hub.dev in your browser (you may need to type in the "http://") and see if things work. If not, :(
+
+### Optional for bonus points
+
+#### Alfred
+
+I prefer Alfred to Spotlight. Applications, double-click it. You will probably want to go to Preferences->Keyboard->Shortcuts and remove CMD-SPACE from Spotlight and assign that as the shortcut for Alfred.
+
+#### ShiftIt
+
+I really miss this when I don't have it. Saves lots of time. Applications->ShiftIt Check open at login.
+
+-- congrats!
+
+### TODO
+
+cx toolbelt installation
+  you can find it in the installerator recipes folder. copy it to /user/local/bin
+

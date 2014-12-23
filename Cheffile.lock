@@ -23,7 +23,7 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-git
   ref: master
-  sha: f0eeca5b88aff2aaab05a3cc64795bef76198aae
+  sha: 2b74c5630fb96b60d36d363f94b52d2664edcdcc
   specs:
     sprout-git (0.1.1)
       homebrew (>= 0.0.0)
@@ -32,20 +32,10 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-homebrew
   ref: master
-  sha: bfcc9b809638bb5cb3d6260aef61ed4de82c2445
+  sha: a2449dcc434ecd325abc150c75c39b7f6979f413
   specs:
     sprout-homebrew (0.2.0)
       homebrew (>= 1.5.4)
-      sprout-base (>= 0.0.0)
-
-GIT
-  remote: https://github.com/pivotal-sprout/sprout-jetbrains-editors
-  ref: master
-  sha: 727ea0aa532edabd478c70623991e4de3245cf86
-  specs:
-    sprout-jetbrains-editors (0.1.0)
-      sprout-base (>= 0.0.0)
-      sprout-homebrew (>= 0.0.0)
 
 GIT
   remote: https://github.com/pivotal-sprout/sprout-mysql
@@ -59,7 +49,7 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-osx-apps
   ref: master
-  sha: 1407e20d95f5b859fdaddd03d30d578e3c061309
+  sha: 043d2c3773c305c3e6efa8906c55d4d2177f08a3
   specs:
     sprout-osx-apps (0.1.0)
       dmg (>= 0.0.0)
@@ -70,7 +60,7 @@ GIT
 GIT
   remote: https://github.com/pivotal-sprout/sprout-osx-settings
   ref: master
-  sha: 2470797e8997688b731928cc78f48e51c3562803
+  sha: fa7f68da19bbb9cc45da22020d9043fcfc7ee73e
   specs:
     sprout-osx-settings (0.1.0)
       homebrew (>= 0.0.0)
@@ -92,6 +82,15 @@ GIT
   sha: 7436b84ac159c026961c66b7f96387755f554617
   specs:
     sprout-rbenv (0.1.0)
+      homebrew (>= 0.0.0)
+      sprout-base (>= 0.0.0)
+
+GIT
+  remote: https://github.com/pivotal-sprout/sprout-redis
+  ref: master
+  sha: b2c856a6558a78941b20be52593cb353def14424
+  specs:
+    sprout-redis (0.1.0)
       homebrew (>= 0.0.0)
       sprout-base (>= 0.0.0)
 
@@ -121,17 +120,26 @@ GIT
       osx (>= 0.0.0)
       sprout-base (>= 0.0.0)
 
+PATH
+  remote: recipes/infl
+  specs:
+    infl (0.0.1)
+      homebrew (>= 0.0.0)
+      sprout-base (>= 0.0.0)
+      sprout-osx-apps (>= 0.0.0)
+
 DEPENDENCIES
+  infl (>= 0)
   osx (>= 0)
   sprout-base (>= 0)
   sprout-git (>= 0)
   sprout-homebrew (>= 0)
-  sprout-jetbrains-editors (>= 0)
   sprout-mysql (>= 0)
   sprout-osx-apps (>= 0)
   sprout-osx-settings (>= 0)
   sprout-postgresql (>= 0)
   sprout-rbenv (>= 0)
+  sprout-redis (>= 0)
   sprout-ruby (>= 0)
   sprout-ssh (>= 0)
   sprout-terminal (>= 0)
