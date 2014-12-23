@@ -116,8 +116,8 @@ node_attributes:
       workspace_directory: Code/infl
       projects:
         -
-          name: devops/sprout-wrap
-          url: git@github.com:influitive/sprout-wrap.git
+          name: devops/installerator
+          url: git@github.com:influitive/installerator.git
         -
           name: devops/dotfiles
           url: git@github.com:influitive/dotfiles.git
