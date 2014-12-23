@@ -59,19 +59,19 @@ recipes:
 - sprout-osx-apps::qt
 - sprout-osx-apps::rabbitmq
 - sprout-osx-apps::skype
-
+- sprout-osx-apps::shiftit
 - sprout-osx-apps::virtualbox
 - sprout-osx-apps::xquartz
 
 # Influitive Custom Recipes from influitive/recipes github
 - infl::mongodb
 - infl::iterm2
+- infl::pow
 - infl::sublime_text
 - infl::dotfiles
 - infl::tmuxinator
 - infl::create_psql_root_user
 - infl::create_folders
-# - infl::shiftit  # TODO this installs an old 1.6 version of ShiftIt 2.3 is much better
 - infl::gems
 
 node_attributes:
