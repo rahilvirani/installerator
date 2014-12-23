@@ -1,0 +1,255 @@
+recipes:
+
+# base (required by sprout)
+- sprout-base
+- sprout-base::bash_it
+- sprout-base::homebrew
+- sprout-homebrew
+
+# settings
+- sprout-osx-settings
+- sprout-osx-settings::dock_preferences
+- sprout-osx-settings::defaults_fast_key_repeat_rate
+- sprout-osx-settings::disable_front_row
+- sprout-osx-settings::enable_assistive_devices
+- sprout-osx-settings::global_environment_variables
+- sprout-osx-settings::osx_disable_natural_scrolling
+- sprout-osx-settings::remove_garageband
+- sprout-osx-settings::safari_preferences
+- sprout-osx-settings::set_finder_show_user_home_in_sidebar
+- sprout-osx-settings::finder_display_full_path
+- sprout-terminal
+- sprout-terminal::update_font
+- sprout-ssh::known_hosts_github
+
+# development (general)
+- sprout-base::workspace_directory
+- sprout-git
+- sprout-git::default_editor
+- sprout-git::projects
+- sprout-git::git_scripts
+
+# development (rails)
+- infl::rvm
+- sprout-ruby
+- sprout-mysql
+- sprout-postgresql
+- sprout-redis
+
+# apps
+- sprout-osx-apps::iterm2
+
+# apps (editors)
+# - sprout-osx-apps::alfred  # TODO has an issue.
+- sprout-osx-apps::ack
+- sprout-osx-apps::chrome
+- sprout-osx-apps::dropbox
+- sprout-osx-apps::firefox
+- sprout-osx-apps::gitx
+- sprout-osx-apps::google_drive
+- sprout-osx-apps::heroku_toolbelt
+- sprout-osx-apps::imagemagick
+- sprout-osx-apps::iterm2
+- sprout-osx-apps::hg
+- sprout-osx-apps::java
+- sprout-osx-apps::lastpass
+- sprout-osx-apps::node_js
+- sprout-osx-apps::phantomjs
+- sprout-osx-apps::pg_admin
+- sprout-osx-apps::qt
+- sprout-osx-apps::rabbitmq
+- sprout-osx-apps::skype
+
+- sprout-osx-apps::virtualbox
+- sprout-osx-apps::xquartz
+
+# Influitive Custom Recipes from influitive/recipes github
+- infl::mongodb
+- infl::iterm2
+- infl::sublime_text
+- infl::dotfiles
+- infl::tmuxinator
+- infl::create_psql_root_user
+- infl::create_folders
+# - infl::shiftit  # TODO this installs an old 1.6 version of ShiftIt 2.3 is much better
+- infl::gems
+
+node_attributes:
+  sprout:
+    git:
+      domain: influitive.com
+      prefix: dev
+      authors:
+        - initials: br
+          name: Brad Robertson
+          shortname: brad
+        - initials: er
+          name: Enric Ribas
+          shortname: enric
+        - initials: za
+          name: Zulfiqar Ali
+          shortname: zulfiqar
+        - initials: tc
+          name: Tyler Chamberland
+          shortname: tyler
+        - initials: rv
+          name: Rahil Virani
+          shortname: rahil
+        - initials: mb
+          name: Marius Butuc
+          shortname: marius
+        - initials: sg
+          name: Sundeep Gupta
+          shortname: sundeep
+        - initials: cs
+          name: Craig Savolainen
+          shortname: craig
+        - initials: rb
+          name: Ryan Brunner
+          shortname: ryan
+        - initials: dm
+          name: David Mills
+          shortname: david
+        - initials: ms
+          name: Mike Stok
+          shortname: mike
+      workspace_directory: Code/infl
+      projects:
+        -
+          name: devops/sprout-wrap
+          url: git@github.com:influitive/sprout-wrap.git
+        -
+          name: devops/dotfiles
+          url: git@github.com:influitive/dotfiles.git
+        -
+          name: devops/recipes
+          url: git@github.com:influitive/recipes.git
+        -
+          name: waldo
+          url: git@github.com:influitive/waldo.git
+        -
+          name: hub
+          url: git@github.com:influitive/influitive-app.git
+        -
+          name: api
+          url: git@github.com:influitive/influitive-api.git
+        -
+          name: community
+          url: git@github.com:influitive/community.git
+        -
+          name: narci-service
+          url: git@github.com:influitive/narci_service.git
+        -
+          name: apartment
+          url: git@github.com:influitive/apartment.git
+        -
+          name: engage
+          url: git@github.com:influitive/engage.git
+        -
+          name: common
+          url: git@github.com:influitive/influitive-common.git
+      global_config:
+        merge.ff: only
+        push.default: current
+        branch.autosetuprebase: always
+        branch.development.rebase: true
+        branch.master.rebase: true
+    terminal:
+      default_profile: 'Pro'
+    settings:
+      clock_format: EEE MMM d  h:mm:ss a
+    dock_preferences:
+      orientation: 'bottom'
+      auto_hide: true
+      clear_apps: true
+      tile_size: 35
+      magnification: true
+    homebrew:
+      formulae:
+        - ctags-exuberant
+        - ag
+        - chromedriver
+        - imagemagick
+        - node
+        # - pstree # Skip until download url is fixed: https://github.com/Homebrew/homebrew/pull/35135
+        - qt
+        - ssh-copy-id
+        - tmux
+        - tree
+        - watch
+        - wget
+        - rbenv-binstubs
+        - rbenv-gem-rehash
+      casks:
+        - ccmenu
+        - firefox
+        - github
+        - gitx-rowanj
+        - google-chrome
+        - skype
+        - tomighty
+        - vagrant
+        - virtualbox
+        - xquartz
+        - xscope
+  infl:
+    symlinks:
+      - tmux.conf
+      - bash_aliases
+      - vimrc
+      - inputrc
+    sources:
+      - bash_aliases
+  sublime_text_packages:
+    - name: Git
+      source: git://github.com/kemayo/sublime-text-2-git.git
+    - name: GitGutter
+      source: git://github.com/jisaacks/GitGutter.git
+    - name: Sublime Linter
+      source: https://github.com/SublimeLinter/SublimeLinter.git
+    - name: Theme - Solarized
+      source: https://github.com/paulcpederson/solarized-sublime
+    - name: SCSS
+      source: git://github.com/kuroir/SCSS.tmbundle.git
+    - name: Rspec
+      source: git://github.com/SublimeText/RSpec.git
+    - name: RubyTest
+      source: https://github.com/maltize/sublime-text-2-ruby-tests.git
+    - name: Markdown Preview
+      source: https://github.com/revolunet/sublimetext-markdown-preview
+    - name: EJS Syntax
+      source: https://github.com/samholmes/EJS.tmLanguage
+    - name: Chai Matchers
+      source: https://github.com/seethroughtrees/sublime-chai-full-completions
+    - name: Handlebars
+      source: https://github.com/daaain/Handlebars
+    - name: SublimeAllAutoComplete
+      source: https://github.com/alienhard/SublimeAllAutocomplete
+    - name: SublimeERB
+      source: https://github.com/eddorre/SublimeERB
+    - name: RailsRelatedFiles
+      source: https://github.com/luqman/SublimeText2RailsRelatedFiles
+    - name: Emmet
+      source: https://github.com/sergeche/emmet-sublime
+  bash_it:
+    enabled_plugins:
+      aliases:
+        - general
+        - git
+        - rails
+        - bundler
+      completion:
+        - defaults
+        - git
+        - git_flow
+        - gem
+        - brew
+  rvm:
+    rubies:
+      ruby-2.1.3:
+        command_line_options: --verify-downloads 1
+      ruby-2.1.4:
+        command_line_options: --verify-downloads 1
+    default_ruby: ruby-2.1.4
+  versions:
+    rvm: e6c29e2e53fbbe6fa09bd31a426d2d97bade019e
