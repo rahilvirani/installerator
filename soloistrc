@@ -37,7 +37,6 @@ recipes:
 
 # apps
 - sprout-osx-apps::iterm2
-# - sprout-osx-apps::alfred  # TODO has an issue.
 - sprout-osx-apps::ack
 - sprout-osx-apps::chrome
 - sprout-osx-apps::dropbox
@@ -175,6 +174,7 @@ node_attributes:
         - wget
       casks:
         - ccmenu
+        - alfred
         - firefox
         - github
         - gitx-rowanj
