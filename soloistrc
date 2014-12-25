@@ -119,9 +119,6 @@ node_attributes:
           name: devops/dotfiles
           url: git@github.com:influitive/dotfiles.git
         -
-          name: devops/recipes
-          url: git@github.com:influitive/recipes.git
-        -
           name: waldo
           url: git@github.com:influitive/waldo.git
         -
@@ -142,9 +139,6 @@ node_attributes:
         -
           name: engage
           url: git@github.com:influitive/engage.git
-        -
-          name: devops/vim
-          url: git@github.com:enricribas/vimforrails.git
         -
           name: common
           url: git@github.com:influitive/influitive-common.git
