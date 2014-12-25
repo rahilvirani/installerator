@@ -29,9 +29,6 @@ cookbook 'sprout-osx-settings',
 cookbook 'osx',
   :github => 'pivotal-sprout/osx'
 
-cookbook 'sprout-rubymine',
-  :github => 'pivotal-sprout/sprout-rubymine'
-
 cookbook 'sprout-terminal',
   :github => 'pivotal-sprout/sprout-terminal'
 
@@ -42,6 +39,6 @@ cookbook 'sprout-ssh',
   :github => 'pivotal-sprout/sprout-ssh'
 
 cookbook 'sprout-homebrew',
-  :path => 'recipes/sprout-homebrew'
+  :github => 'pivotal-sprout/sprout-homebrew'
 
 cookbook 'infl', path: 'recipes/infl'

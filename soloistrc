@@ -3,7 +3,6 @@ recipes:
 # base (required by sprout)
 - sprout-base
 - sprout-base::bash_it
-- sprout-base::homebrew
 - sprout-homebrew
 
 # settings
@@ -38,8 +37,6 @@ recipes:
 
 # apps
 - sprout-osx-apps::iterm2
-
-# apps (editors)
 # - sprout-osx-apps::alfred  # TODO has an issue.
 - sprout-osx-apps::ack
 - sprout-osx-apps::chrome
@@ -66,7 +63,6 @@ recipes:
 # Influitive Custom Recipes from influitive/recipes github
 - infl::mongodb
 - infl::iterm2
-- infl::pow
 - infl::sublime_text
 - infl::dotfiles
 - infl::tmuxinator
@@ -173,18 +169,18 @@ node_attributes:
         - node
         # - pstree # Skip until download url is fixed: https://github.com/Homebrew/homebrew/pull/35135
         - qt
+        - pow
         - ssh-copy-id
         - tmux
         - tree
         - watch
         - wget
-        - rbenv-binstubs
-        - rbenv-gem-rehash
       casks:
         - ccmenu
         - firefox
         - github
         - gitx-rowanj
+        - anvil
         - google-chrome
         - skype
         - tomighty
