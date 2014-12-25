@@ -8,7 +8,7 @@ end
 
 node['infl']['sources'].each do |file|
   execute "adding #{file} as a source to .bash_profile" do
-    command "echo 'source ~/#{node['workspace_directory']}/devops/dotfiles/#{file}' >> #{node['sprout']['home']}/.bash_profile"
+    command "echo 'source ~/.#{file}' >> #{node['sprout']['home']}/.bash_profile"
     not_if "grep #{file} #{node['sprout']['home']}/.bash_profile"
   end
 end

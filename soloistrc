@@ -71,6 +71,7 @@ recipes:
 - infl::gems
 
 node_attributes:
+  code_folder: Code/infl
   sprout:
     git:
       domain: influitive.com
