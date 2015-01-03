@@ -51,7 +51,7 @@ recipes:
 - sprout-osx-apps::lastpass
 - sprout-osx-apps::node_js
 - sprout-osx-apps::phantomjs
-- sprout-osx-apps::pg_admin
+# - sprout-osx-apps::pg_admin # Not yet with Yosemite
 - sprout-osx-apps::qt
 - sprout-osx-apps::rabbitmq
 - sprout-osx-apps::skype
