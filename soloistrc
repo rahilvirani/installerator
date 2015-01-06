@@ -65,6 +65,7 @@ recipes:
 - infl::create_psql_root_user
 - infl::create_folders
 - infl::gems
+- infl::pull_project_git_repos
 
 node_attributes:
   code_folder: Code/infl
