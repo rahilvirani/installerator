@@ -47,7 +47,6 @@ recipes:
 - sprout-osx-apps::iterm2
 - sprout-osx-apps::hg
 - sprout-osx-apps::java
-- sprout-osx-apps::lastpass
 - sprout-osx-apps::node_js
 - sprout-osx-apps::phantomjs
 # - sprout-osx-apps::pg_admin # Not yet with Yosemite
