@@ -90,9 +90,6 @@ node_attributes:
         - initials: rv
           name: Rahil Virani
           shortname: rahil
-        - initials: mb
-          name: Marius Butuc
-          shortname: marius
         - initials: sg
           name: Sundeep Gupta
           shortname: sundeep
