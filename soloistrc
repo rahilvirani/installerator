@@ -41,7 +41,6 @@ recipes:
 - sprout-osx-apps::chrome
 - sprout-osx-apps::dropbox
 - sprout-osx-apps::firefox
-- sprout-osx-apps::gitx
 - sprout-osx-apps::google_drive
 - sprout-osx-apps::heroku_toolbelt
 - sprout-osx-apps::imagemagick
