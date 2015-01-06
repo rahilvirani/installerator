@@ -70,6 +70,7 @@ recipes:
 node_attributes:
   code_folder: Code/infl
   dbuser: root
+  dbname: root
   sprout:
     git:
       domain: influitive.com

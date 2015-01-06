@@ -21,4 +21,3 @@ execute "create-database" do
   command "createdb -U postgres -O #{node[:dbuser]} -E utf8 -T template0 #{node[:dbname]}"
   not_if exists
 end
-
