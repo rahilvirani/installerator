@@ -187,6 +187,7 @@ node_attributes:
         - vagrant
         - virtualbox
         - xquartz
+        - sublime-text
         - xscope
   infl:
     symlinks:
