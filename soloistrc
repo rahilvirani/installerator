@@ -111,9 +111,11 @@ node_attributes:
         -
           name: devops/installerator
           url: git@github.com:influitive/installerator.git
+          always_pull: true
         -
           name: devops/dotfiles
           url: git@github.com:influitive/dotfiles.git
+          always_pull: true
         -
           name: waldo
           url: git@github.com:influitive/waldo.git
