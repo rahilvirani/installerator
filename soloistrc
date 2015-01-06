@@ -60,7 +60,6 @@ recipes:
 - sprout-osx-apps::xquartz
 
 # Influitive Custom Recipes from influitive/recipes github
-- infl::mongodb
 - infl::iterm2
 - infl::sublime_text
 - infl::dotfiles
@@ -172,7 +171,9 @@ node_attributes:
         - tmux
         - tree
         - watch
+        - mongodb
         - wget
+        - memcached
       casks:
         - ccmenu
         - alfred
