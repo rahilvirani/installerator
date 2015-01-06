@@ -12,3 +12,9 @@ node['infl']['sources'].each do |file|
     not_if "grep #{file} #{node['sprout']['home']}/.bash_profile"
   end
 end
+
+execute "adding extra PATHs to .bash_profile" do
+  path_extra = 'PATH=$PATH:/usr/local/sbin'
+  command "echo '#{path_extra}' >> #{node['sprout']['home']}/.bash_profile"
+  not_if "grep #{path_extra} #{node['sprout']['home']}/.bash_profile"
+end

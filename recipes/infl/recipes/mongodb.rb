@@ -14,4 +14,3 @@ execute "load the mongodb plist into the mac daemon startup thing" do
   command "launchctl load -w #{node['sprout']['home']}/Library/LaunchAgents/homebrew.mxcl.mongodb.plist"
   user node['current_user']
 end
-
