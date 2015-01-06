@@ -71,6 +71,7 @@ recipes:
 
 node_attributes:
   code_folder: Code/infl
+  dbuser: root
   sprout:
     git:
       domain: influitive.com
