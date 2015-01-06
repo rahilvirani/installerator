@@ -210,8 +210,6 @@ node_attributes:
       source: git://github.com/kuroir/SCSS.tmbundle.git
     - name: Rspec
       source: git://github.com/SublimeText/RSpec.git
-    - name: RubyTest
-      source: https://github.com/maltize/sublime-text-2-ruby-tests.git
     - name: Markdown Preview
       source: https://github.com/revolunet/sublimetext-markdown-preview
     - name: EJS Syntax
