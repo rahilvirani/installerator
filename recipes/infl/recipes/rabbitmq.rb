@@ -5,8 +5,8 @@ directory "/Users/#{node['current_user']}/Library/LaunchAgents" do
   action :create
 end
 
-execute "copy mongodb plist to ~/Library/LaunchAgents" do
-  command "cp `brew --prefix rabbitmq`/homebrew.mxcl.rabbitmq.plist #{node['sprout']['home']}/Library/LaunchAgents/"
+execute "copy rabbitMQ plist to ~/Library/LaunchAgents" do
+  command "cp `brew --prefix rabbitmq`/homebrew.mxcl.rabbitmq.plist #{node['sprout']['home']}/Library/LaunchAgents/  2>/dev/null || :"
   user node['current_user']
 end
 
