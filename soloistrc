@@ -47,7 +47,7 @@ recipes:
 
 # Influitive Custom Recipes from influitive/recipes github
 - infl::iterm2
-- infl::sublime_text # possibly move away to atom?
+- infl::sublime_text3
 - infl::dotfiles
 - infl::bash_settings
 - infl::tmuxinator
@@ -220,11 +220,9 @@ node_attributes:
       - bash_aliases
   sublime_text_packages:
     - name: Git
-      source: git://github.com/kemayo/sublime-text-2-git.git
+      source: git://github.com/kemayo/sublime-text-git.git
     - name: GitGutter
       source: git://github.com/jisaacks/GitGutter.git
-    - name: Sublime Linter
-      source: https://github.com/SublimeLinter/SublimeLinter.git
     - name: Theme - Solarized
       source: https://github.com/paulcpederson/solarized-sublime
     - name: SCSS
@@ -233,20 +231,24 @@ node_attributes:
       source: git://github.com/SublimeText/RSpec.git
     - name: Markdown Preview
       source: https://github.com/revolunet/sublimetext-markdown-preview
-    - name: EJS Syntax
+    - name: EJS
       source: https://github.com/samholmes/EJS.tmLanguage
-    - name: Chai Matchers
+    - name: Chai Completions
       source: https://github.com/seethroughtrees/sublime-chai-full-completions
     - name: Handlebars
       source: https://github.com/daaain/Handlebars
-    - name: SublimeAllAutoComplete
+    - name: All Autocomplete
       source: https://github.com/alienhard/SublimeAllAutocomplete
-    - name: SublimeERB
-      source: https://github.com/eddorre/SublimeERB
-    - name: RailsRelatedFiles
-      source: https://github.com/luqman/SublimeText2RailsRelatedFiles
-    - name: Emmet
-      source: https://github.com/sergeche/emmet-sublime
+    - name: Related Files
+      source: https://github.com/fabiokr/sublime-related-files
+    - name: Rails Latest Migration
+      source: https://github.com/alexpls/Rails-Latest-Migration
+    - name: RSpec
+      source: https://github.com/SublimeText/RSpec
+    - name: RuboCop
+      source: https://github.com/pderichs/sublime_rubocop
+    - name: SideBarEnhancements
+      source: https://github.com/titoBouzout/SideBarEnhancements
   bash_it:
     enabled_plugins:
       aliases:
