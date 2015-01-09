@@ -61,6 +61,7 @@ recipes:
 - infl::iterm2
 - infl::sublime_text
 - infl::dotfiles
+- infl::bash_settings
 - infl::tmuxinator
 - infl::mongodb
 - infl::rabbitmq
