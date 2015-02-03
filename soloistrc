@@ -130,6 +130,9 @@ node_attributes:
         - initials: ms
           name: Mike Stok
           shortname: mike
+        - initials: la
+          name: Lizz Armstrong
+          shortname: lizz
       workspace_directory: Code/infl
       projects:
         -
