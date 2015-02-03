@@ -185,7 +185,6 @@ node_attributes:
         - google-chrome
         - skype
         - tomighty
-        - vagrant
         - virtualbox
         - xquartz
         - sublime-text
