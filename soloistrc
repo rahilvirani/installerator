@@ -65,7 +65,6 @@ recipes:
 - sprout-osx-apps::firefox
 - sprout-osx-apps::google_drive
 - sprout-osx-apps::imagemagick
-- sprout-osx-apps::iterm2
 - sprout-osx-apps::hg
 - sprout-osx-apps::java
 - sprout-osx-apps::node_js
