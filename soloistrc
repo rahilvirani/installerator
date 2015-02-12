@@ -6,7 +6,7 @@ recipes:
 - sprout-homebrew
 
 # settings
-# Explicitly call out which things we're running 
+# Explicitly call out which things we're running
 
 # From the default recipe
 - sprout-osx-settings::defaults_fast_key_repeat_rate
@@ -133,6 +133,9 @@ node_attributes:
         - initials: la
           name: Lizz Armstrong
           shortname: lizz
+        - initials: nf
+          name: Nick Faulkner
+          shortname: nick
       workspace_directory: Code/infl
       projects:
         -
