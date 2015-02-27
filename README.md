@@ -23,7 +23,7 @@ If you receive a message about the update server being unavailable and are on Ma
 
 ### 2. Clone this project
 
-    git clone https://github.com:influitive/installerator.git
+    git clone https://github.com/influitive/installerator.git
     cd installerator
 
 ### 3. Install soloist & and other required gems
