@@ -50,7 +50,7 @@ curl get.pow.cx | sh
 cd ~/Code/infl
 ```
 
-For each project of [ 'hub', 'narci-service', 'api', 'waldo' ]
+For each project of [ 'hub', 'narci-service', 'api', 'waldo', 'community' ]
 
 ```
 cd <<project>>
