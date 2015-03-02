@@ -276,6 +276,8 @@ node_attributes:
         command_line_options: --verify-downloads 1
       ruby-2.1.4:
         command_line_options: --verify-downloads 1
-    default_ruby: ruby-2.1.4
+      ruby-2.2.0:
+        command_line_options: --verify-downloads 1
+    default_ruby: ruby-2.2.0
   versions:
     rvm: e6c29e2e53fbbe6fa09bd31a426d2d97bade019e
