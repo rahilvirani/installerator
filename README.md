@@ -37,6 +37,12 @@ bundle exec soloist
 ```
 Last two steps take a while; have some more coffee. You may have to re-enter password multiple times.
 
+### VIM
+
+```
+vim +PluginInstall +qall now
+```
+
 ### POW
 
 yeah, not working from script
