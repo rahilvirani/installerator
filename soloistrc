@@ -70,7 +70,7 @@ recipes:
 - sprout-osx-apps::java
 - sprout-osx-apps::node_js
 - sprout-osx-apps::phantomjs
-# - sprout-osx-apps::pg_admin # Not yet with Yosemite
+# - sprout-osx-apps::pg_admin # Not yet with Yosemite try pg_admin3 ??
 - sprout-osx-apps::qt
 - sprout-osx-apps::rabbitmq
 - sprout-osx-apps::skype
@@ -80,7 +80,7 @@ recipes:
 
 # Influitive Custom Recipes from influitive/recipes github
 - infl::iterm2
-- infl::sublime_text
+- infl::sublime_text # possibly move away to atom?
 - infl::dotfiles
 - infl::bash_settings
 - infl::tmuxinator
