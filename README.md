@@ -86,9 +86,12 @@ Get custom colours working:
 npm install
 ```
 
-Get Reacty Stuff working:
+Get Integrations working:
 
 ```
+cd engines/integrations
+npm install 
+npm install -g gulp
 gulp
 ```
 
