@@ -1,6 +1,6 @@
 # Set Up Infrastructure
 
-## Installerator (formerly sprout-wrap)
+## Installerator (one day Interstaller)
 
 Try not to add manual tasks here. If the script is missing something, just add it to the script. Ask Enric how. 
 
