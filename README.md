@@ -82,7 +82,15 @@ rake db:seed
 ```
 
 Get custom colours working:
-`npm install`
+```
+npm install
+```
+
+Get Reacty Stuff working:
+
+```
+gulp
+```
 
 #### Done!
 
