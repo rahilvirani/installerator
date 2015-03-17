@@ -99,3 +99,14 @@ gulp
 
 Visit http://app.hub.dev in your browser (you may need to type in the "http://") and see if things work. If not, :(
 
+### Optional for bonus points 
+
+#### Alfred
+
+I prefer Alfred to Spotlight. Applications, double-click it. You will probably want to go to Preferences->Keyboard->Shortcuts and remove CMD-SPACE from Spotlight and assign that as the shortcut for Alfred.
+
+#### ShiftIt
+
+I really miss this when I don't have it. Saves lots of time. Applications->ShiftIt Check open at login. 
+
+-- congrats!
