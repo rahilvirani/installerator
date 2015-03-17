@@ -110,3 +110,9 @@ I prefer Alfred to Spotlight. Applications, double-click it. You will probably w
 I really miss this when I don't have it. Saves lots of time. Applications->ShiftIt Check open at login. 
 
 -- congrats!
+
+### TODO
+
+cx toolbelt installation
+  you can find it in the installerator recipes folder. copy it to /user/local/bin
+  
