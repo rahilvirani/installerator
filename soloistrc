@@ -211,6 +211,7 @@ node_attributes:
         - github
         - rowanj-gitx
         - anvil
+        - atom
         - google-chrome
         - skype
         - tomighty
