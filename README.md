@@ -31,17 +31,12 @@ Use your personal github if it's associated to Influitive or use influitive-serv
 mkdir -p ~/Code/infl/devops
 cd ~/Code/infl/devops
 git clone https://github.com/influitive/installerator.git
+cd installerator 
 sudo gem install bundler
 bundle
 bundle exec soloist 
 ```
 Last two steps take a while; have some more coffee. You may have to re-enter password multiple times.
-
-### VIM
-
-```
-vim +PluginInstall +qall now
-```
 
 ### POW
 
