@@ -173,6 +173,9 @@ node_attributes:
         -
           name: common
           url: git@github.com:influitive/influitive-common.git
+        - 
+          name: advocate_anywhere
+          url: git@github.com:influitive/influitive-embed.git
       global_config:
         merge.ff: only
         push.default: current
