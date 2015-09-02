@@ -10,6 +10,15 @@ Try not to add manual tasks here. If the script is missing something, just add i
 http://git-scm.com/download/mac
 ```
 
+#### Install dev-tools
+On Yosemite I (brad) had to install the xcode dev tools to get soloist to install
+properly (installing native extensions requires it). Enric apparently didn't
+have to do this on Mavericks?
+
+```
+xcode-select --install
+```
+
 #### Get SSH keys set up
 
 ```
