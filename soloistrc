@@ -10,7 +10,6 @@ recipes:
 
 # From the default recipe
 - sprout-osx-settings::defaults_fast_key_repeat_rate
-- sprout-osx-settings::function_keys
 - sprout-osx-settings::global_environment_variables
 - sprout-osx-settings::input_on_login
 - sprout-osx-settings::keyboard
