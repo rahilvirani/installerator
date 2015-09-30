@@ -61,6 +61,13 @@ If POW doesn't work make sure that the ~/.pow folder is a symlink to
 test it by going to http://app.hub.dev
 You should get an Proxy Error not an Application Error
 
+### Vim
+
+You'll get some package missing errors from vim, to fix that run from the command line:
+
+```
+vim +BundleInstall +qall
+```
 
 ## Set up the App
 
@@ -151,4 +158,3 @@ I really miss this when I don't have it. Saves lots of time. Applications->Shift
 
 cx toolbelt installation
   you can find it in the installerator recipes folder. copy it to /user/local/bin
-
