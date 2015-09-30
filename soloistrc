@@ -141,6 +141,9 @@ node_attributes:
           name: narci-service
           url: git@github.com:influitive/narci_service.git
         -
+          name: referral-app
+          url: git@github.com:influitive/referral-app.git
+        -
           name: apartment
           url: git@github.com:influitive/apartment.git
         -
