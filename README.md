@@ -5,15 +5,8 @@
 Try not to add manual tasks here. If the script is missing something, just add it to the script. Ask Enric how.
 
 
-#### Install GIT
-```
-http://git-scm.com/download/mac
-```
-
 #### Install dev-tools
-On Yosemite I (brad) had to install the xcode dev tools to get soloist to install
-properly (installing native extensions requires it). Enric apparently didn't
-have to do this on Mavericks?
+This will add git and other tools for compiling gem extensions
 
 ```
 xcode-select --install
