@@ -48,6 +48,14 @@ To install pow, vim modules, and atom's rubocop linter run
 ./post-install.sh
 ```
 
+If `pow` doesn't work make sure that the `~/.pow` folder is a symlink to
+
+```
+/Users/dev/.pow -> /Users/dev/Library/Application Support/Pow/Hosts
+```
+
+test it by going to http://app.hub.dev You should get an Proxy Error not an Application Error
+
 TODO: move the script into chef/soloist
 
 ## Set up the App
