@@ -40,27 +40,15 @@ bundle exec soloist
 ```
 Last two steps take a while; have some more coffee. You may have to re-enter password multiple times.
 
-### POW
+### Post Installation
 
-yeah, not working from script
-```
-curl get.pow.cx | sh
-```
-
-If POW doesn't work make sure that the ~/.pow folder is a symlink to
-```
- /Users/dev/.pow -> /Users/dev/Library/Application Support/Pow/Hosts
-```
-test it by going to http://app.hub.dev
-You should get an Proxy Error not an Application Error
-
-### Vim
-
-You'll get some package missing errors from vim, to fix that run from the command line:
+To install pow, vim modules, and atom's rubocop linter run
 
 ```
-vim +BundleInstall +qall
+./post-install.sh
 ```
+
+TODO: move the script into chef/soloist
 
 ## Set up the App
 
