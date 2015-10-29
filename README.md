@@ -123,6 +123,22 @@ brew info memcached
 
 and follow the instructions to start up memcache
 
+#### Nokigiri failed to install
+
+Complaining about libxml2? Try this:
+
+  brew install libxml2
+  bundle config build.nokogiri "--use-system-libraries --with-xml2-include=/usr/local/opt/libxml2/include/libxml2"
+  bundle install
+
+#### pg failed to install
+
+First make sure postgresql is installed:
+
+  brew install postgresql
+  bundle config build.pg "--with-pg-config=/usr/local/Cellar/postgresql/9.4.5/bin/pg_config"
+  env ARCHFLAGS="-arch x86_64" bundle install
+
 #### Other Problems
 
 sorry.
