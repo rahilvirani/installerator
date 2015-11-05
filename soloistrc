@@ -109,6 +109,9 @@ node_attributes:
         - initials: ja
           name: Jesse Abramson
           shortname: jesse
+        - initials: tc
+          name: Teresa Chu
+          shortname: teresa
       workspace_directory: Code/infl
       projects:
         -
