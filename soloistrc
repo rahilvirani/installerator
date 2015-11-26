@@ -36,7 +36,6 @@ recipes:
 - sprout-osx-apps::hg
 - sprout-osx-apps::java
 - sprout-osx-apps::node_js
-- sprout-osx-apps::phantomjs
 - sprout-osx-apps::pg_admin
 - sprout-osx-apps::qt
 - sprout-osx-apps::rabbitmq
