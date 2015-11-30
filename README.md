@@ -26,6 +26,33 @@ https://github.com/settings/ssh
 
 Use your personal github if it's associated to Influitive or use influitive-server and ask for password
 
+#### Install homebrew & deps
+```
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+And install dependencies:
+```
+brew tap homebrew/versions
+brew install git postgresql node012 node4.2 memcached
+```
+
+#### Install homebrew cask
+Homebrew cask lets you package manage your common OS X Applications
+```
+brew install caskroom/cask/brew-cask
+brew cask install google-chrome sublime-text3 iterm
+```
+
+#### Install RVM
+```
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+```
+
+#### Install global NPM deps
+```
+npm install --global gulp babel-cli karma-cli webpack
+````
 
 #### Install Installerator (very meta)
 
@@ -110,7 +137,6 @@ Get Integrations working:
 ```
 cd engines/integrations
 npm install
-npm install -g gulp
 gulp
 ```
 ## Problems
@@ -121,7 +147,7 @@ If you get Dalli::Server errors in your log, try...
 brew info memcached
 ```
 
-and follow the instructions to start up memcache
+and follow the instructions to start up memcached
 
 #### Nokigiri failed to install
 
@@ -138,6 +164,23 @@ First make sure postgresql is installed:
   brew install postgresql
   bundle config build.pg "--with-pg-config=/usr/local/Cellar/postgresql/9.4.5/bin/pg_config"
   env ARCHFLAGS="-arch x86_64" bundle install
+
+#### `You don't have write permissions for the /Library/Ruby/Gems/2.0.0 directory`
+
+1. Make sure RVM is installed:
+```
+rvm -v
+```
+2. Make sure your folder has a `.rvm-version file`
+```
+ls -la | grep .ruby-version
+```
+3.
+```
+cd .
+```
+
+And try again.
 
 #### Other Problems
 
