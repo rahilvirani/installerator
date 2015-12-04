@@ -1,11 +1,10 @@
 # Set Up Infrastructure
 
 ## Installerator (one day Interstaller)
-
 Try not to add manual tasks here. If the script is missing something, just add it to the script. Ask Enric how.
 
-
 #### Install dev-tools
+
 This will add git and other tools for compiling gem extensions
 
 ```
@@ -27,6 +26,7 @@ https://github.com/settings/ssh
 Use your personal github if it's associated to Influitive or use influitive-server and ask for password
 
 #### Install homebrew & deps
+
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
@@ -34,24 +34,28 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 And install dependencies:
 ```
 brew tap homebrew/versions
-brew install git postgresql node012 node4.2 memcached
-```
-
-#### Install homebrew cask
-Homebrew cask lets you package manage your common OS X Applications
-```
-brew install caskroom/cask/brew-cask
-brew cask install google-chrome sublime-text3 iterm
+brew install git postgresql memcached
 ```
 
 #### Install RVM
+
 ```
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
 ```
 
-#### Install global NPM deps
+#### Install NVM and Node
+
 ```
-npm install --global gulp babel-cli karma-cli webpack
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+nvm install 0.12
+nvm install 4.2.2
+nvm use 0.12 # For now we're still on 0.12, but there will be .nvmrc added to each repo for proper node versions
+```
+
+#### Ensure npm 2 (because 3 is slow)
+
+```
+npm install --global npm@2
 ````
 
 #### Install Installerator (very meta)
@@ -86,7 +90,6 @@ test it by going to http://app.hub.dev You should get an Proxy Error not an Appl
 TODO: move the script into chef/soloist
 
 ## Set up the App
-
 ```
 cd ~/Code/infl
 ```
@@ -191,6 +194,13 @@ sorry.
 Visit http://app.hub.dev in your browser (you may need to type in the "http://") and see if things work. If not, :(
 
 ### Optional for bonus points
+
+##### Homebrew Cask
+Homebrew cask lets you package manage your common OS X Applications
+```
+brew install caskroom/cask/brew-cask
+brew cask install google-chrome sublime-text3 iterm atom firefox
+```
 
 #### Alfred
 
