@@ -28,21 +28,8 @@ recipes:
 
 # apps
 - sprout-osx-apps::iterm2
-- sprout-osx-apps::ack
-- sprout-osx-apps::chrome
-- sprout-osx-apps::firefox
-- sprout-osx-apps::google_drive
-- sprout-osx-apps::imagemagick
 - sprout-osx-apps::hg
 - sprout-osx-apps::java
-- sprout-osx-apps::node_js
-- sprout-osx-apps::pg_admin
-- sprout-osx-apps::qt
-- sprout-osx-apps::rabbitmq
-- sprout-osx-apps::skype
-- sprout-osx-apps::shiftit
-- sprout-osx-apps::virtualbox
-- sprout-osx-apps::xquartz
 
 # Influitive Custom Recipes from influitive/recipes github
 - infl::iterm2
@@ -189,6 +176,9 @@ node_attributes:
       formulae:
         - ctags-exuberant
         - ag
+        - ack
+        - phantomjs
+        - rabbitmq
         - chromedriver
         - imagemagick
         - node
@@ -211,9 +201,20 @@ node_attributes:
         - google-chrome
         - skype
         - tomighty
-        - virtualbox
+        - pgadmin
+        - skype
         - xquartz
         - sublime-text3
+        - qlcolorcode
+        - qlstephen
+        - qlmarkdown
+        - quicklook-json
+        - qlprettypatch
+        - quicklook-csv
+        - betterzipql
+        - qlimagesize
+        - webpquicklook
+        - suspicious-package
   infl:
     symlinks:
       - tmux.conf
