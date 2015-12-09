@@ -243,6 +243,16 @@ node_attributes:
         - virtualbox
         - xquartz
         - sublime-text3
+        - qlcolorcode
+        - qlstephen
+        - qlmarkdown
+        - quicklook-json
+        - qlprettypatch
+        - quicklook-csv
+        - betterzipql
+        - qlimagesize
+        - webpquicklook
+        - suspicious-package
   infl:
     symlinks:
       - tmux.conf
