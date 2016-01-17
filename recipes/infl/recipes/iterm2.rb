@@ -1,7 +1,7 @@
 dest = "#{node['sprout']['home']}/Library/Preferences/com.googlecode.iterm2.plist"
 
 template dest do
-  owner node['current_user']
+  owner node['sprout']['user']
   source "com.googlecode.iterm2.plist"
 end
 

@@ -1,4 +1,4 @@
-name             'infl-recipes'
+name             'infl'
 maintainer       'Influitive'
 maintainer_email 'dev@influitive.com'
 license          'MIT'

@@ -1,17 +1,21 @@
 package "rabbitmq"
 
-directory "/Users/#{node['current_user']}/Library/LaunchAgents" do
-  owner node['current_user']
+package_name = 'rabbitmq'
+plist_name = "homebrew.mxcl.#{package_name}.plist"
+launch_agents_path = File.expand_path(File.join(node.default['sprout']['home'] , 'Library/LaunchAgents'))
+
+directory launch_agents_path do
   action :create
+  recursive true
+  owner node['sprout']['user']
 end
 
-execute "copy rabbitMQ plist to ~/Library/LaunchAgents" do
-  command "cp `brew --prefix rabbitmq`/homebrew.mxcl.rabbitmq.plist #{node['sprout']['home']}/Library/LaunchAgents/  2>/dev/null || :"
-  user node['current_user']
+execute "copy #{package_name} plist to ~/Library/LaunchAgents" do
+  command "cp `brew --prefix mongodb`/#{plist_name} #{launch_agents_path} 2>/dev/null || :"
+  user node['sprout']['user']
 end
 
-execute "load the rabbitmq plist into the mac daemon startup thing" do
-  command "launchctl load -w #{node['sprout']['home']}/Library/LaunchAgents/homebrew.mxcl.rabbitmq.plist"
-  user node['current_user']
+execute "load the #{package_name} plist into launchd" do
+  command "launchctl load -w #{launch_agents_path}/#{plist_name}"
+  user node['sprout']['user']
 end
-

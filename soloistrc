@@ -5,40 +5,6 @@ recipes:
 - sprout-base::bash_it
 - sprout-homebrew
 
-# settings
-# Explicitly call out which things we're running
-
-# From the default recipe
-- sprout-osx-settings::defaults_fast_key_repeat_rate
-- sprout-osx-settings::global_environment_variables
-- sprout-osx-settings::input_on_login
-- sprout-osx-settings::keyboard
-- sprout-osx-settings::locate
-- sprout-osx-settings::machine_name
-- sprout-osx-settings::menubar
-- sprout-osx-settings::screensaver
-- sprout-osx-settings::screen_sharing
-- sprout-osx-settings::screen_sharing_app
-- sprout-osx-settings::set_menubar_clock_format
-- sprout-osx-settings::shared_memory
-- sprout-osx-settings::snmpd
-- sprout-osx-settings::sshd_on
-- sprout-osx-settings::tcp_keepalive
-- sprout-osx-settings::timemachine
-- sprout-osx-settings::updates
-
-# Others we were adding
-- sprout-osx-settings::disable_front_row
-- sprout-osx-settings::dock_preferences
-- sprout-osx-settings::enable_assistive_devices
-- sprout-osx-settings::osx_disable_natural_scrolling
-- sprout-osx-settings::remove_garageband
-- sprout-osx-settings::safari_preferences
-- sprout-osx-settings::set_finder_show_user_home_in_sidebar
-- sprout-osx-settings::finder_display_full_path
-
-- sprout-terminal
-
 - sprout-ssh::known_hosts_github
 
 # development (general)
@@ -57,21 +23,7 @@ recipes:
 
 # apps
 - sprout-osx-apps::iterm2
-- sprout-osx-apps::ack
-- sprout-osx-apps::chrome
-- sprout-osx-apps::firefox
-- sprout-osx-apps::google_drive
-- sprout-osx-apps::imagemagick
 - sprout-osx-apps::hg
-- sprout-osx-apps::java
-- sprout-osx-apps::node_js
-- sprout-osx-apps::pg_admin
-- sprout-osx-apps::qt
-- sprout-osx-apps::rabbitmq
-- sprout-osx-apps::skype
-- sprout-osx-apps::shiftit
-- sprout-osx-apps::virtualbox
-- sprout-osx-apps::xquartz
 
 # Influitive Custom Recipes from influitive/recipes github
 - infl::iterm2
@@ -86,10 +38,16 @@ recipes:
 - infl::gems
 - infl::pull_project_git_repos
 
+# settings
+- sprout-osx-settings
+- sprout-osx-settings::dock_preferences
+- sprout-terminal
+
 node_attributes:
   code_folder: Code/infl
   dbuser: root
   dbname: root
+  workspace_directory: Code/infl
   sprout:
     git:
       domain: influitive.com
@@ -140,7 +98,6 @@ node_attributes:
         - initials: tc
           name: Teresa Chu
           shortname: teresa
-      workspace_directory: Code/infl
       projects:
         -
           name: devops/installerator
@@ -218,10 +175,13 @@ node_attributes:
       formulae:
         - ctags-exuberant
         - ag
+        - ack
+        - phantomjs
+        - rabbitmq
         - chromedriver
         - imagemagick
         - node
-        # - pstree # Skip until download url is fixed: https://github.com/Homebrew/homebrew/pull/35135
+        - pstree # Skip until download url is fixed: https://github.com/Homebrew/homebrew/pull/35135
         - qt
         - ssh-copy-id
         - tmux
@@ -231,6 +191,7 @@ node_attributes:
         - memcached
       casks:
         - ccmenu
+        - java
         - firefox
         - github
         - rowanj-gitx
@@ -240,7 +201,8 @@ node_attributes:
         - google-chrome
         - skype
         - tomighty
-        - virtualbox
+        - pgadmin
+        - skype
         - xquartz
         - sublime-text3
         - qlcolorcode

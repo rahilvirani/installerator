@@ -7,10 +7,10 @@
 
 include_recipe "sprout-base::user_owns_usr_local"
 
-execute "brew tap caskroom/versions" do
-    command "brew tap caskroom/versions"
-      user node['current_user']
-end
+#execute "brew tap caskroom/versions" do
+#    command "brew tap caskroom/versions"
+#      user node['current_user']
+#end
 
 homebrew_cask "sublime-text3"
 
