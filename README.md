@@ -16,7 +16,7 @@ xcode-select --install
 
 ```
 ssh-keygen -t rsa -q -f ~/.ssh/id_rsa -P ""
-cat ~/.ssh/id_rsa.pub
+cat ~/.ssh/id_rsa.pub | pbcopy
 ```
 
 copy that output and add it to Github as new SSH key
